@@ -1,0 +1,21 @@
+Descrição:
+A vulnerabilidade de Host Header Injection ocorre quando uma aplicação web não valida ou filtra corretamente os cabeçalhos Host fornecidos pelos usuários. Os cabeçalhos Host são usados para indicar o nome de domínio ou endereço IP do servidor com o qual o cliente deseja se comunicar. Quando um invasor consegue injetar um cabeçalho Host malicioso, ele pode manipular o destino da solicitação, levando a ataques como redirecionamentos não autorizados, spoofing de domínio, ataques de phishing e até mesmo violação da segurança do servidor.
+
+Riscos:
+
+Redirecionamento não autorizado: Ao explorar a vulnerabilidade de Host Header Injection, um atacante pode manipular o cabeçalho Host para redirecionar solicitações válidas para um destino diferente e malicioso. Isso pode levar os usuários a sites falsos ou controlados pelo atacante, onde eles podem ser enganados para revelar informações confidenciais, como senhas, dados pessoais ou detalhes de pagamento.
+
+Spoofing de domínio: Através da injeção de cabeçalhos Host maliciosos, um invasor pode fazer com que a aplicação exiba conteúdo de um domínio diferente ao que o usuário acredita estar acessando. Isso pode ser usado para enganar os usuários, fazendo-os pensar que estão interagindo com um site legítimo, enquanto estão sendo direcionados para um site falso e potencialmente prejudicial.
+
+Ataques de phishing: Ao controlar o cabeçalho Host, um atacante pode criar ataques de phishing mais convincentes, enviando emails ou mensagens que parecem legítimos, mas, na verdade, direcionam o usuário para um site malicioso. Essa técnica aumenta as chances de os usuários serem enganados e fornecerem informações confidenciais.
+
+Violação da segurança do servidor: Um invasor experiente pode explorar a vulnerabilidade de Host Header Injection para manipular o cabeçalho Host de forma a desviar solicitações para um servidor controlado por ele. Isso pode permitir que o atacante acesse informações sensíveis, execute ataques adicionais no servidor ou explore outras vulnerabilidades presentes na aplicação.
+
+Recomendação:
+Para mitigar a vulnerabilidade de Host Header Injection, é recomendado adotar as seguintes medidas:
+
+Validação e filtragem adequadas: Implemente uma camada de validação e filtragem para os cabeçalhos Host recebidos pela aplicação. Certifique-se de que apenas valores legítimos e esperados sejam aceitos, rejeitando ou sanitizando quaisquer entradas maliciosas. Use bibliotecas ou funções específicas fornecidas pelo seu framework ou tecnologia web para realizar essa validação.
+
+Configuração correta do servidor: Verifique se o servidor web está corretamente configurado para tratar os cabeçalhos Host. Configure-o para responder apenas aos domínios e endereços IP esperados e rejeite solicitações com cabeçalhos Host inválidos ou suspeitos.
+
+Treinamento de desenvolvedores: Eduque os desenvolvedores sobre as boas práticas de segurança em relação aos cabeçalhos Host e a importância
